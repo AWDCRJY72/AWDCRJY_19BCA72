@@ -18,3 +18,9 @@ System.out.println("Even numbers:"+even);
 System.out.println("Odd numbers:"+odd);
 }
 }
+
+output:
+even numbers
+1
+odd numbers
+2
