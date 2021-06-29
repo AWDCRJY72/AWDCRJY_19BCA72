@@ -24,3 +24,8 @@ default:System.out.println("consonant");
 }
 }
 }
+
+output:
+Enter a character
+e
+vowel
