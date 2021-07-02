@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+class IncDec
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+if(n%4==0)
+{
+n++;
+}
+else
+{
+n--;
+}
+System.out.println(n);
+}
+}
+
+output:
+C:\Users\mynew>cd\
+
+C:\>cd java
+
+C:\java>javac incdec.java
+
+C:\java>java IncDec
+5
+4
