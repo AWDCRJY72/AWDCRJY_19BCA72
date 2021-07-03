@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+class Automorphic 
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+int s,count=0;
+s=n*n;
+while(n>0)
+{
+n/=10;
+count++;
+}
+if(n==0)
+   System.out.println("Automorphic number");
+else 
+   System.out.println("Not a Automorphic number");
+}
+}
+
+output:
+C:\Users\mynew>cd\
+
+C:\>cd java
+
+C:\java>javac Automorphic.java
+
+C:\java>java Automorphic
+6
+Automorphic number
