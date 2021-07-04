@@ -1,0 +1,85 @@
+import java.util.*;
+class Pattern
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+char ch='A';
+int s=(2*n)-1;
+int start=0;
+int end=s-1;
+char a[][]=new char[s][s];
+while(n>0)
+{
+for(int i=start;i<=end;i++)
+{
+  for(int j=start;j<=end;j++)
+  {
+    if(i==start||i==end||j==start||j==end)
+     a[i][j]=ch;
+  }
+    ++start;
+    --end;
+    ++ch;    
+    --n;
+   
+  }
+}
+for(int i=0;i<s;i++)
+{
+  for(int j=0;j<s;j++)
+  {
+    System.out.print(a[i][j]+" ");
+  }
+   System.out.println( );
+}
+}
+}
+
+output:
+C:\java>javac alphabetp.java
+
+C:\java>java Pattern
+4
+A A A A A A A
+A B B B B B A
+A B C C C B A
+A B C D C B A
+A B C C C B A
+A B B B B B A
+A A A A A A A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
