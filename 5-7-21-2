@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+class Sum
+{
+public static void main(String ar[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the array elements:");
+int n=sc.nextInt();
+int a[]=new int[n];
+System.out.println("Enter values into array");
+for(int i=0;i<n;i++)
+{
+a[i]=sc.nextInt();
+}
+int sum=0;
+for(int i=0;i<n;i++)
+{
+sum+=a[i];
+}
+System.out.println("Sum of array elements:"+sum);
+}
+}
+
+output:
+C:\java>javac sum.java
+
+C:\java>java Sum
+Enter the array elements:
+5
+Enter values into array
+1 4 5 8 3
+Sum of array elements:21
