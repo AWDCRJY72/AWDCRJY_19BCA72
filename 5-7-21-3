@@ -1,0 +1,58 @@
+import java.io.*;
+import java.util.*;
+class Solution
+{
+public static void main(String arg[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the array element:");
+int n=sc.nextInt();
+int a[]=new int[n];
+System.out.println("Enter values into array");
+for(int i=0;i<n;i++)
+a[i]=sc.nextInt();
+int temp;
+for(int i=0;i<a.length;i++)
+{
+for(int j=0;j<a.length;j++)
+{
+  if(a[i]<a[j])
+  {
+    temp=a[i]; 
+    a[i]=a[j];
+    a[j]=temp;
+  }
+}
+}
+System.out.println("Odd numbers in an ascending order:");
+for(int i=0;i<n;i++)
+{
+if(a[i]%2!=0)
+System.out.println(a[i]+" ");
+}
+}
+}  
+
+output:
+C:\java>javac Solution.java
+
+C:\java>java Solution
+Enter the array element:
+5
+Enter values into array
+10 11 5 2 9
+Odd numbers in an ascending order:
+5
+9
+11
+
+
+
+
+
+
+
+
+
+
+
