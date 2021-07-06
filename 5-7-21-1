@@ -1,0 +1,50 @@
+import java.io.*;
+import java.util.*;
+class Solution
+{
+public static void main(String arg[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the array element:");
+int n=sc.nextInt();
+int a[]=new int[n];
+int lar=0;
+int seclar=0;
+System.out.println("Enter values into array");
+for(int i=0;i<n;i++)
+a[i]=sc.nextInt();
+for(int i=0;i<a.length;i++)
+{
+  if(a[i]>lar)  
+  {
+       seclar=lar;
+       lar=a[i];
+  }
+  else if(a[i]>seclar) 
+  {
+       seclar=a[i];
+  }
+}
+System.out.println("The second Largest Number is:"+seclar);
+}
+}
+
+output:
+C:\java>javac second.java
+
+C:\java>java Solution
+Enter the array element:
+5
+Enter values into array
+10 40 50 70 20
+The second Largest Number is:50
+
+
+
+
+
+
+
+
+
+
