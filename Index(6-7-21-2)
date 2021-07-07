@@ -1,0 +1,44 @@
+import java.io.*;
+import java.util.*;
+class Index
+{
+public static void main(String ar[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter array size:");
+int n=sc.nextInt();
+int a[]=new int[n];
+System.out.println("Enter values into array");
+for(int i=0;i<n;i++)
+ a[i]=sc.nextInt();
+System.out.println("Enter Left Index");
+int left=sc.nextInt();
+System.out.println("Enter Right Index");
+int right=sc.nextInt();
+int sum=0;
+if(n>0 && left<n && left<right && right<n && right>left)
+{
+for(int i=2;i<=right;i++)
+ sum+=a[i];
+}
+System.out.println("Sum between left index and right index is:"+sum);
+}
+}
+
+output:
+C:\Users\mynew>cd\
+
+C:\>cd java
+
+C:\java>javac Index.java
+
+C:\java>java Index
+Enter array size:
+8
+Enter values into array
+3 10 10 3 4 5 4 10
+Enter Left Index
+2
+Enter Right Index
+4
+Sum between left index and right index is:17
