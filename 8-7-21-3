@@ -1,0 +1,56 @@
+import java.util.*;
+class Transpose
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Rows");
+int r=sc.nextInt();
+System.out.println("columns");
+int c=sc.nextInt();
+System.out.println("Enter a matrix");
+int a[][]=new int[r][c];
+int b[][]=new int[r][c];
+for(int i=0;i<r;i++)
+  for(int j=0;j<c;j++)
+   a[i][j]=sc.nextInt();
+for(int i=0;i<r;i++)
+{
+  for(int j=0;j<c;j++)
+  {
+   b[i][j]=a[j][i];
+  }
+}
+System.out.println("After transposition");
+for(int i=0;i<r;i++)
+{
+  for(int j=0;j<c;j++)
+  {
+    System.out.print(b[i][j]+" ");
+  }
+System.out.println( );
+}
+}
+}
+output:
+C:\java>javac transpose.java
+
+C:\java>java Transpose
+Rows
+3
+columns
+3
+Enter a matrix
+4 5 6
+3 7 8
+1 2 3
+After transposition
+4 3 1
+5 7 2
+6 8 3
+
+
+
+
+
+
