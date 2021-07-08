@@ -1,0 +1,41 @@
+import java.util.*;
+class ColumnSum
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Rows");
+int r=sc.nextInt();
+System.out.println("columns");
+int c=sc.nextInt();
+int a[][]=new int[r][c];
+for(int i=0;i<r;i++)
+  for(int j=0;j<c;j++)
+   a[i][j]=sc.nextInt();
+System.out.println("Enter the matrix:");
+for(int i=0;i<r;i++)
+{
+int sum=0;
+  for(int j=0;j<c;j++)
+  {
+    sum+=a[j][i];
+  }
+System.out.println("column sum:"+sum);
+
+}
+}
+}
+output:
+C:\java>javac Column.java
+C:\java>java ColumnSum
+Rows
+3
+columns
+3
+Enter the matrix:
+1 2 3
+4 5 6
+7 8 9
+column sum:12
+column sum:15
+column sum:18
