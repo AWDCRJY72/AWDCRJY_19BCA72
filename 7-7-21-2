@@ -1,0 +1,25 @@
+class Solution {
+    public int majorityElement(int[] nums) {
+        int count=0;
+        int ele=0;
+
+        for (int num : nums) {
+            if(count == 0) 
+                ele=num;
+                if (ele == num) {
+                    count ++;
+                }
+            }
+
+         return ele;  
+
+        }
+}
+
+output:
+Your input
+[3,2,3]
+Output
+3
+Expected
+3
