@@ -1,0 +1,63 @@
+import java.util.*;
+class Diagonal
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Rows");
+int r=sc.nextInt();
+System.out.println("Columns");
+int c=sc.nextInt();
+int a[][]=new int[r][c];
+System.out.println("Enter a matrix");
+int sum=0,sum1=0;
+for(int i=0;i<r;i++)
+for(int j=0;j<c;j++)
+a[i][j]=sc.nextInt();
+for(int i=0;i<r;i++)
+{
+ for(int j=0;j<c;j++)
+ {
+  if(i==j)
+   sum+=a[i][j];
+ }
+}
+System.out.println("sum of diagnals is "+sum);			
+for(int i=0;i<r;i++)
+{
+for(int j=0;j<c;j++)
+{
+if((i+j)==(r-1))
+ sum1+=a[i][j];
+  }
+}
+System.out.println("sum of diagnals is "+sum);			
+for(int i=0;i<r;i++)
+{
+for(int j=0;j<c;j++)
+{
+if((i+j)==(r-1))
+ sum1+=a[i][j];
+}
+}
+System.out.println("sum of anti diagonals is "+sum1);
+int res=sum-sum1;
+System.out.println("Difference between diagonals"+res);
+}
+}
+output:
+
+C:\java>javac diagonal.java
+
+C:\java>java Diagonal
+Rows
+3
+Columns
+3
+Enter a matrix
+10 15 13
+11  8  5
+ 9  4  3
+sum of diagnals is 21
+sum of anti diagonals is 30
+Difference between diagonals-9
