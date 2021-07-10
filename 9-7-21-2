@@ -1,0 +1,85 @@
+import java.util.*;
+class Swapping
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Rows");
+int r=sc.nextInt();
+System.out.println("Columns");
+int c=sc.nextInt();
+int a[][]=new int[r][c];
+int b[][]=new int[r][c];
+System.out.println("Enter a matrix");
+for(int i=0;i<r;i++)
+for(int j=0;j<c;j++)
+a[i][j]=sc.nextInt();
+System.out.println("Enter b matrix");
+for(int i=0;i<r;i++)
+for(int j=0;j<c;j++)
+b[i][j]=sc.nextInt();
+for(int i=0;i<r;i++)
+{
+  for(int j=0;j<c;j++)
+  {
+   int temp=a[i][j];
+   a[i][j]=b[i][j];
+   b[i][j]=temp;
+  }
+}
+System.out.println("After swap a matrix is");
+for(int i=0;i<r;i++)
+{
+for(int j=0;j<c;j++)
+{
+System.out.print(a[i][j]+" ");
+}
+System.out.println();
+}
+System.out.println("After swap b matrix is");
+for(int i=0;i<r;i++)
+{
+	for(int j=0;j<c;j++)
+	{
+		System.out.print(b[i][j]+" ");
+	}
+System.out.println();
+}
+}
+}
+output:
+C:\java>javac Swapping.java
+
+C:\java>java Swapping
+Rows
+3
+Columns
+3
+Enter a matrix
+10 15 13
+11  8  5
+ 9  4  3
+Enter b matrix
+3 6 8
+2 4 7
+5 9 1
+After swap a matrix is
+3 6 8
+2 4 7
+5 9 1
+After swap b matrix is
+10 15 13
+11  8  5
+ 9  4  3
+
+
+
+
+
+
+
+
+
+
+
+
