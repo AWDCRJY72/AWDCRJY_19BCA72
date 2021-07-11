@@ -1,0 +1,13 @@
+class UpperLower
+{
+public static void main(String args[])
+{
+String str="HELLOWORLD";
+System.out.println(str.toLowerCase());
+}
+}
+output:
+C:\java>javac UpperLower.java
+
+C:\java>java UpperLower
+helloworld
