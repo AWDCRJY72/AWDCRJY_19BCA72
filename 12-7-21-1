@@ -1,0 +1,24 @@
+import java.util.*;
+class Solution
+{
+public static void main(String args[]) 
+{
+String str;
+Scanner sc=new Scanner(System.in);
+str=sc.next();
+char ch[]= str.toCharArray();
+Arrays.sort(ch);
+String res="";
+for(int i=ch.length-1;i>=0;i--)
+{
+res+=ch[i];
+}
+System.out.println("Sort of string in descending order is:"+res);
+}
+}
+output:
+C:\java>javac dessort.java
+
+C:\java>java Solution
+hello
+Sort of string in descending order is:ollhe
