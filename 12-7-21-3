@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+import java.lang.*;
+class Upper
+{
+public static void main(String args[])
+{
+String s1;
+Scanner sc=new Scanner(System.in);
+s1=sc.nextLine();
+String s[]=s1.split(" ");
+String s2="";
+for(String i:s)
+{
+s2+=i.substring(0,1).toUpperCase() +i.substring(1) +" ";
+}
+System.out.println(s2);
+}
+}
+output:
+
+C:\java>javac StringUpper.java
+
+C:\java>java Upper
+this is java program
+This Is Java Program
