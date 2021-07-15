@@ -1,0 +1,40 @@
+import java.util.*;
+class substring
+{
+public static void main(String[] args)
+{
+Scanner sc=new Scanner(System.in); 
+System.out.println(" Enter string1 ");
+String s1=sc.next();
+System.out.println(" Enter string2 ");
+String s2=sc.next();
+boolean status=substring(s1,s2); 
+if(status)
+ System.out.println("True");
+else
+ System.out.println("False"); 
+}
+static boolean substrings(String s1,String s2)
+{
+int n=s1.length();
+for(int i=0;i<n;i++)
+{
+for(int j=i+1;j<=n;j++)
+{
+  if(s1.substring(i,j).equals(s2))
+    return true;
+}
+}
+ return false;
+}
+}
+output:
+
+C:\java>javac substring.java
+
+C:\java>java substring
+ Enter string1
+aditya
+ Enter string2
+dit
+True
