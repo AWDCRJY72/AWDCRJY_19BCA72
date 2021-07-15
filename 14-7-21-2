@@ -1,0 +1,39 @@
+import java.util.*;
+class Frequency
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter array size");
+int n=sc.nextInt();
+System.out.println("Enter values into array");
+int a[]=new int[n];
+for(int i=0;i<n;i++)
+a[i]=sc.nextInt();
+System.out.println("Enter search element");
+int search=sc.nextInt();
+ArrayCount(a,search);
+}
+  static void ArrayCount(int a[],int search)
+  {
+    int count=0;
+  for(int i=0;i<a.length;i++)
+  {
+    if(a[i]==search)
+	     count++;
+  }
+System.out.println("Frequency of an element "+search+" is "+count);		
+  }
+}
+
+output:
+C:\java>javac frequency.java
+
+C:\java>java Frequency
+Enter array size
+8
+Enter values into array
+2 3 2 5 3 1 2 6
+Enter search element
+2
+Frequency of an element 2 is 3
