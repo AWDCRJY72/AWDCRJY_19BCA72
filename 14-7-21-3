@@ -5,12 +5,12 @@ class A
    { 
      Scanner sc=new Scanner(System.in);
      System.out.println("Enter p value");
-     int p=sc.nextInt();
+     float p=sc.nextFloat();
      System.out.println("Enter t value");
-      int t=sc.nextInt();
+      float t=sc.nextFloat();
      System.out.println("Enter r value");
-      int r=sc.nextInt();
-      int i=(p*t*r)/100;
+      float r=sc.nextFloat();
+      float i=(p*t*r)/100;
      System.out.println("simple Interest:"+i);
    }
   public void show()
@@ -32,9 +32,9 @@ C:\java>javac simple.java
 
 C:\java>java Simple
 Enter p value
-20
+20.0
 Enter t value
-30
+30.0
 Enter r value
-40
-simple Interest:240
+40.0
+simple Interest:240.0
