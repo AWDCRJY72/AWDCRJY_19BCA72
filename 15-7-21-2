@@ -1,0 +1,33 @@
+import java.util.*;
+class search
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter size of array");
+int n=sc.nextInt();
+System.out.println("Enter values into array");
+ArrayList<Integer> A=new ArrayList<Integer>(n);
+for(int i=0;i<n;i++)
+A.add(sc.nextInt());
+System.out.println("Enter search element");
+int B=sc.nextInt();
+boolean status=A.contains(B);
+if(status)
+System.out.println("Element found");
+else
+System.out.println("Element not found");
+}
+}
+output:
+
+C:\java>javac search.java
+
+C:\java>java search
+Enter size of array
+5
+Enter values into array
+10 20 30 40 50
+Enter search element
+30
+Element found
