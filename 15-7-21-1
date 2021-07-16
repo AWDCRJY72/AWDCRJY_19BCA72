@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+class JoinArray
+{
+public static void main(String args[])
+{
+ArrayList<Integer> a=new ArrayList<Integer>();
+a.add(10);
+a.add(20);
+a.add(30);
+ArrayList<Integer> b=new ArrayList<Integer>();
+b.add(40);
+b.add(50);
+b.add(90);
+a.addAll(b);
+System.out.println(a);
+}
+}
+output:
+C:\java>javac joinarray.java
+
+C:\java>java JoinArray
+[10, 20, 30, 40, 50, 90]
