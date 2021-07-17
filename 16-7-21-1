@@ -1,0 +1,43 @@
+import java.util.*;
+class Update 
+{
+public static void main(String args[]) 
+{
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter size");
+int n = sc.nextInt();
+LinkedList<Integer> l = new LinkedList<Integer>();
+System.out.println("Enter values");
+for (int i = 0; i<n; i++)
+l.add(sc.nextInt());
+System.out.println("Enter the value to be replaced");
+int s= sc.nextInt();
+boolean status = l.contains(s);
+if (status)
+{
+int k = l.indexOf(s);
+System.out.println("enter the new value");
+int NewValue = sc.nextInt();
+l.set(k, NewValue);
+System.out.println("updated list is:" + l);
+} 
+else 
+{
+System.out.println("false");
+}
+}
+}
+output:
+
+C:\java>javac replace.java
+
+C:\java>java Update
+Enter size
+5
+Enter values
+1 3 4 6 7
+enter the value to be replaced
+4
+enter the new value
+8
+updated list is:- [1, 3, 8, 6, 7]
