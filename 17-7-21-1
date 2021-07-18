@@ -1,0 +1,27 @@
+ 
+class Solution{
+public int firstMissingPositive(int[] nums) {
+
+TreeSet<Integer> st= new TreeSet<Integer>();
+        for(int i: nums){
+            st.add(i);
+        }
+        int j;
+      for( j=1;j<=st.last();j++){
+          if(st.contains(j)==false){
+              break;
+          }
+          else if(j==st.last()){
+              j++;
+              break;
+          }
+      }
+   return j;     
+    }
+}
+
+
+OUTPUT:-
+[1,2,0]
+3
+    
