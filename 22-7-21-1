@@ -1,0 +1,38 @@
+class MyQueue {
+    Stack<Integer> obj;
+    
+    /** Initialize your data structure here. */
+    public MyQueue() {
+        obj=new Stack<Integer>();
+    }
+    
+    /** Push element x to the back of queue. */
+    public void push(int x) {
+        Collections.reverse(obj);
+        obj.push(x);
+        Collections.reverse(obj);
+    }
+    
+    /** Removes the element from in front of queue and returns that element. */
+    public int pop() {
+        return obj.pop();
+    }
+    
+    /** Get the front element. */
+    public int peek() {
+       return obj.peek(); 
+    }
+    
+    /** Returns whether the queue is empty. */
+    public boolean empty() {
+      return obj.isEmpty();  
+    }
+}
+output:
+Your input
+["MyQueue","push","push","peek","pop","empty"]
+[[],[1],[2],[],[],[]]
+Output
+[null,null,null,1,1,false]
+Expected
+[null,null,null,1,1,false]
