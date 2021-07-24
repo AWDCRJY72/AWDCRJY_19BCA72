@@ -1,0 +1,36 @@
+import java.util.*;
+class Arraylist
+{
+public static void main(String[] args) 
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter array elements");
+int n=sc.nextInt();
+int a[]=new int[n];
+System.out.println("Enter values into array");
+for(int i=0;i<n;i++)
+a[i]=sc.nextInt();
+ArrayList<Integer> a1=new ArrayList<Integer>();
+for(int j:a)		
+{
+  a1.add(j);
+}
+Iterator itr=a1.iterator();
+System.out.println("Elements are:");
+ while(itr.hasNext())
+ {
+  Integer b=(Integer)itr.next();
+  System.out.print(b+" ");
+ }
+}
+}
+output:
+C:\java>javac arraylist.java
+
+C:\java>java Arraylist
+Enter array elements
+5
+Enter values into array
+20 30 29 10 11
+Elements are:
+20 30 29 10 11
