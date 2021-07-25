@@ -1,0 +1,11 @@
+class Solution{
+    static StringconRevstr(String S1,String S2){
+    StringBuilder s3=new StringBuilder();
+    S1=S1.concat(S2);
+    s3.append(S1);
+    s3.reverse();
+    String S=s3.toString();
+    return S;
+    }
+ }
+ 
