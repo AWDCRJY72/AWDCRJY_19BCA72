@@ -1,0 +1,51 @@
+import java.util.*;
+class TestClass {
+    static int n=500000;
+    static boolean a[]=new boolean[n+1];
+    public static void seive()
+     { 
+       for(int i=0;i<=n;i++)      
+         a[i]=true;
+         a[0]=false;
+         a[1]=false;       
+       for(int i=2;i*i<=n;i++)
+       {
+           if(a[i]==true)
+           {
+               for(int j=i*i;j<=n;j+=i)
+               a[j]=false;
+           }
+
+       }
+     }
+    public static void main(String args[] ) throws Exception {
+     seive();
+     Scanner sc=new Scanner(System.in);
+     int t=sc.nextInt();
+     while(t>0)
+     {
+         int l=sc.nextInt();
+         int r=sc.nextInt();
+         int sum=0;
+         for(int i=1;i<=r;i++)
+         {
+              if(a[i]==true)
+              sum+=i;
+         }
+         System.out.println(sum);
+         t--;
+     }  
+       
+    }
+}
+output:
+Input
+2
+1 6
+4 13
+Output
+10
+36
+Expected Correct Output
+10
+36
