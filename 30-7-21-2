@@ -1,0 +1,48 @@
+import java.util.*;
+class TestClass {
+static int N=100005;
+public static int prime[]=new int[N];
+public static void sieve()
+{
+for(int i=0;i<N;i++)
+{
+prime[i]=1;
+}
+prime[0]=0;
+prime[1]=0;
+for(int i=2;i*i<N;i++)
+{
+if(prime[i]==1)
+{
+for(int j=i*i;j<N;j=j+i)
+{
+prime[j]=0;
+}
+}
+}
+}
+    public static void main(String args[] ) throws Exception {
+Scanner sc=new Scanner(System.in);
+int t=sc.nextInt();
+sieve();
+for(int i=0;i<t;i++)
+{
+  int n=sc.nextInt();
+    if(n!=2)   
+    System.out.println("Deepa");
+    else 
+   System.out.println("Arjit");
+}
+}
+}
+output:
+Input
+2
+4
+8
+Output
+Deepa
+Deepa
+Expected Correct Output
+Deepa
+Deepa
