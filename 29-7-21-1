@@ -1,0 +1,57 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+public class Solution {
+static int prime[]=new int[1000005];
+public static void sieve()
+{
+for(int i=0;i<1000005;i++)
+prime[i]=1;
+prime[0]=0;
+prime[1]=0;
+for(int p=2;p*p<1000005;p++)
+{
+if(prime[p]==1)
+{
+for(int j=p*p;j<1000005;j+=p)
+{
+prime[j]=0;
+}
+}
+}
+}
+public static void main(String[] args) 
+{
+    Scanner sc=new Scanner(System.in);
+ int T=sc.nextInt();
+sieve();
+ for(int i=0;i<T;i++)
+ {
+int n=sc.nextInt();
+if(prime[n]==1)
+System.out.println("Yes");
+else 
+System.out.println("No");
+    }
+}
+}
+
+output:
+Input (stdin)
+
+3
+2
+4
+5
+Your Output (stdout)
+
+Yes
+No
+Yes
+Expected Output
+
+Yes
+No
+Yes
