@@ -1,0 +1,61 @@
+import java.util.*;
+class Main
+{
+static int r=1000005;
+public static int prime[]=new int[r];
+public static void sieve()
+{
+for(int i=0;i<r;i++)
+{
+prime[i]=i;
+}
+prime[0]=1;
+prime[1]=1;
+for(int j=2;j*j<r;j++)
+{
+if(prime[j]==j)
+{
+for(int k=j*j;k<r;k+=j)
+{
+prime[k]=j;
+}
+}
+}
+}
+public static void main(String[] args) {
+Scanner sc=new Scanner(System.in);
+int N=sc.nextInt();
+int k=1;
+int x;
+int pos=sc.nextInt();
+int arr[]=new int[N];
+int count=0;
+sieve();
+System.out.println("Prime factors:");
+while(N!=1)
+{
+  x=prime[N];
+ arr[k]=x;
+System.out.println(arr[k]);
+  k++;
+count++;
+N=N/prime[N];
+}
+System.out.println("Second prime factor is:");
+if(pos<k)
+System.out.println(arr[pos]);
+else
+System.out.println(-1);
+}
+}
+output:
+C:\java>javac ass2.java
+
+C:\java>java Main
+6
+2
+Prime factors:
+2
+3
+Second prime factor is:
+3
