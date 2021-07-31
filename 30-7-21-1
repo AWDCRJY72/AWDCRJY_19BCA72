@@ -1,0 +1,57 @@
+import java.util.*;
+class Solution {
+static  int=1000005; 
+    static int prime[]=new int[N];
+public static void sieve()
+{
+for(int i=0;i<N;i++)
+{
+prime[i]=i;
+}
+prime[0]=1;
+prime[1]=1;
+for(int j=2;j*j<N;j++)
+{
+if(prime[j]==j)
+{
+for(int k=j*j;k<N;k+=j)
+{
+prime[k]=j;
+}
+}
+}
+}
+    public boolean isUgly(int n) {
+        Scanner sc=new Scanner(System.in);
+int k=1;
+int x;
+int arr[]=new int[n];
+int count=0;
+sieve();
+        int flag=0;
+while(n!=1)
+{
+x=prime[n];
+    if(x==2 || x==3 || x==5){
+arr[k]=x;
+k++;
+n=n/prime[n];
+    }
+    else{
+        flag=1;
+    break;
+}
+}
+if(flag==0)
+    return true;
+    else
+        return false;
+}
+}
+output:
+Your input
+6
+Output
+true
+Expected
+true
