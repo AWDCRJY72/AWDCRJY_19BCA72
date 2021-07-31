@@ -1,6 +1,5 @@
-import java.util.*;
 class Solution {
-static  int=1000005; 
+    static int N=1000005;
     static int prime[]=new int[N];
 public static void sieve()
 {
@@ -22,18 +21,28 @@ prime[k]=j;
 }
 }
     public boolean isUgly(int n) {
-  sieve();
-     if(n == 0){
+    sieve();
+      if(n==1){
+            return true;
+        }else if(n<1){
             return false;
         }
-        for(int i = 2; i < 6; i++){
-            while(n % i == 0){
-                n /= i;
+        while(n!=1){
+            if(n%2==0){
+                n=n/2;
+            }else if(n%3==0){
+                n=n/3;
+            }else if(n%5==0){
+                n=n/5;
+            }else{
+                return false;
             }
         }
-        return n == 1;    
+        return true;
 }
 }
+
+
 output:
 Your input
 6
