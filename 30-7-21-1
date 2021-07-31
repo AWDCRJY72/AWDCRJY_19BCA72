@@ -22,30 +22,16 @@ prime[k]=j;
 }
 }
     public boolean isUgly(int n) {
-        Scanner sc=new Scanner(System.in);
-int k=1;
-int x;
-int arr[]=new int[n];
-int count=0;
-sieve();
-        int flag=0;
-while(n!=1)
-{
-x=prime[n];
-    if(x==2 || x==3 || x==5){
-arr[k]=x;
-k++;
-n=n/prime[n];
-    }
-    else{
-        flag=1;
-    break;
-}
-}
-if(flag==0)
-    return true;
-    else
-        return false;
+  sieve();
+     if(n == 0){
+            return false;
+        }
+        for(int i = 2; i < 6; i++){
+            while(n % i == 0){
+                n /= i;
+            }
+        }
+        return n == 1;    
 }
 }
 output:
