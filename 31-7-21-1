@@ -1,4 +1,4 @@
-import java.uti.*;
+import java.util.*;
 class NextPrime
 {
 static int N=100005;
